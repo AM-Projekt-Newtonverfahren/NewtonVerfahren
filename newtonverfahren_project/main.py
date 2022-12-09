@@ -11,5 +11,5 @@ def app_test():
     app.exec_()
 
 def ableitenPolynom(funktion):
-
+    pass
 
