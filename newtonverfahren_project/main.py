@@ -21,5 +21,7 @@ def ableitenPolynom(basis, exponent):
     else:
         print(str(newBasis)+"x^"+str(newExponent))
 
-print(numpy.sin(numpy.deg2rad(2)))
-ableitenPolynom(1, numpy.sin(numpy.deg2rad(2)))
+def yAchsenabschnittBerechnen(startwert, basis, exponent):
+    pass
+
+ableitenPolynom(2, 3)
