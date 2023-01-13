@@ -2,18 +2,23 @@ import sys
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy
-from PyQt5.QtWidgets import QApplication, QLabel
+from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QHBoxLayout, QScrollArea
+
 
 
 def app_test():
     app = QApplication([])
+    window = QWidget()
+    layoutPrinciple = QHBoxLayout();
+    scrollArea = QScrollArea()
     label = QLabel("Hello world")
-    label.show()
+    layoutPrinciple.addWidget(scrollArea)
+    window.setLayout(layoutPrinciple)
+    window.show()
     app.exec_()
 
-
-def ableitenPolynom(exponent):
-    newBasis = exponent;
+def ableitenPolynom(basis, exponent):
+    newBasis = basis*exponent;
     newExponent = exponent-1;
 
     if(exponent == 0):
@@ -21,6 +26,10 @@ def ableitenPolynom(exponent):
     else:
         print(str(newBasis)+"x^"+str(newExponent))
 
+def yAchsenabschnittBerechnen(startwert, basis, exponent):
+    achse = (basis*startwert)**exponent
+    print(achse)
+    
 def ableitenExponent(basis):
     print(str(basis)+"^x*LOGe("+str(basis)+")")
 
@@ -29,8 +38,7 @@ def SteigungBerechnen(startwert, funktion):
     if(funktion.__contains__("x^")):
         pass
 
-def yAchsenabschnittBerechnen(startwert, funktion):
-    pass
 
-ableitenPolynom(4)
-ableitenExponent(3)
+app_test()
+ableitenPolynom(2, 1)
+yAchsenabschnittBerechnen(1, 2, 3)
