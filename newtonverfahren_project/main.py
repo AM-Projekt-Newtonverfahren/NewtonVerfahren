@@ -29,7 +29,7 @@ def ableitenPolynom(basis, exponent):
         print(str(newBasis)+"x^"+str(newExponent))
 
 def yAchsenabschnittBerechnen(startwert, basis, exponent):
-    achse = (basis*startwert)**exponent
+    achse = basis*(startwert**exponent)
     print(achse)
     
 def ableitenExponent(basis):
