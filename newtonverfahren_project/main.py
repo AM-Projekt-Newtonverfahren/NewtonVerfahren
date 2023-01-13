@@ -21,22 +21,24 @@ def ableitenPolynom(basis, exponent):
     newBasis = basis*exponent;
     newExponent = exponent-1;
 
-    if(exponent == 0):
+    if (exponent == 0):
         print(0)
+    elif (newExponent == 0):
+        print(str(newBasis))
     else:
         print(str(newBasis)+"x^"+str(newExponent))
         return str(newBasis)+"x^"+str(newExponent)
 
 def yAchsenabschnittBerechnenStartwert(startwert, basis, exponent):
-    achse = (basis*startwert)**exponent
+    achse = basis*(startwert**exponent)
     print(achse)
     return achse
 
 def yAchesnabschnittBerechnenTangente(yAchse, startwert, ableitung, basis, exponent):
     if(ableitung.__contains__("x^")):
         parts = ableitung.split("x^")
-        function = (basis*startwert)**exponent
-        ableitungMitStartwert = (int(parts[0])*startwert)**int(parts[1])
+        function = basis*(startwert**exponent)
+        ableitungMitStartwert = int(parts[0])*(startwert**int(parts[1]))
         steigung = function-ableitungMitStartwert
         print(steigung)
         return steigung
@@ -62,5 +64,4 @@ achse = yAchsenabschnittBerechnenStartwert(1, 2, 3)
 achseTangente = yAchesnabschnittBerechnenTangente(achse, 1, ableitung, 2, 3)
 steigung = SteigungBerechnen(1, ableitung)
 getNewStartwert(achseTangente, steigung)
-
 
