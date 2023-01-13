@@ -5,6 +5,7 @@ import numpy
 from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QHBoxLayout, QScrollArea
 
 
+
 def app_test():
     app = QApplication([])
     window = QWidget()
@@ -15,7 +16,6 @@ def app_test():
     window.setLayout(layoutPrinciple)
     window.show()
     app.exec_()
-
 
 def ableitenPolynom(basis, exponent):
     newBasis = basis*exponent;
@@ -29,6 +29,14 @@ def ableitenPolynom(basis, exponent):
 def yAchsenabschnittBerechnen(startwert, basis, exponent):
     achse = (basis*startwert)**exponent
     print(achse)
+    
+def ableitenExponent(basis):
+    print(str(basis)+"^x*LOGe("+str(basis)+")")
+
+#interpreter
+def SteigungBerechnen(startwert, funktion):
+    if(funktion.__contains__("x^")):
+        pass
 
 
 app_test()
