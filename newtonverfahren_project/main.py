@@ -21,8 +21,10 @@ def ableitenPolynom(basis, exponent):
     newBasis = basis*exponent;
     newExponent = exponent-1;
 
-    if(exponent == 0):
+    if (exponent == 0):
         print(0)
+    elif (newExponent == 0):
+        print(str(newBasis))
     else:
         print(str(newBasis)+"x^"+str(newExponent))
 
@@ -41,4 +43,5 @@ def SteigungBerechnen(startwert, funktion):
 
 app_test()
 ableitenPolynom(2, 1)
+print("---------")
 yAchsenabschnittBerechnen(1, 2, 3)
