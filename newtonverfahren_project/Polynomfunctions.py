@@ -1,45 +1,47 @@
 import numpy
 
-class Polynomfunctions:
-    def __init__(self):
-        pass
+class Polynomfunctions():
+    def __init__(self, basis, exponent, startwert):
+        self.basis = basis
+        self.exponent = exponent
+        self.startwert = startwert
 
-    def ableitenPolynom(basis, exponent):
-        newBasis = basis * exponent;
-        newExponent = exponent - 1;
+    def ableitenPolynom(self):
+        newBasis = self.basis * self.exponent;
+        newExponent = self.exponent - 1;
 
-        if (exponent == 0):
+        if (self.exponent == 0):
             print(0)
         elif (newExponent == 0):
             print(str(newBasis))
         else:
-            print(str(newBasis) + "x^ " + str(newExponent))
+            print(str(newBasis) + "x^" + str(newExponent))
+            self.tangentenSteigung = str(newBasis)+"x^"+str(newExponent)
             return str(newBasis) + "x^ " + str(newExponent)
 
-    def yAchsenabschnittBerechnenStartwert(startwert, basis, exponent):
-        achse = basis * (startwert ** exponent)
+    def yAchsenabschnittBerechnenStartwert(self):
+        achse = self.basis * (self.startwert ** self.exponent)
         print(achse)
+        self.achsenAbschnitt = achse
         return achse
 
-    def yAchesnabschnittBerechnenTangente(yAchse, startwert, ableitung, basis, exponent):
-        if (ableitung.__contains__("x^")):
-            parts = ableitung.split("x^")
-            function = basis * (startwert ** exponent)
-            ableitungMitStartwert = int(parts[0]) * (startwert ** int(parts[1]))
+    def yAchesnabschnittBerechnenTangente(self):
+        if (self.tangentenSteigung.__contains__("x^")):
+            parts = self.tangentenSteigung.split("x^")
+            function = self.basis * (self.startwert ** self.exponent)
+            ableitungMitStartwert = int(parts[0]) * (self.startwert ** int(parts[1]))
             steigung = function - ableitungMitStartwert
             print(steigung)
+            self.achseTangente = steigung
             return steigung
 
-    def ableitenExponent(basis):
-        print(str(basis) + "^x*LOGe( " + str(basis) + ")")
+    def steigungBerechnen(self):
+        if (self.tangentenSteigung.__contains__("x^")):
+            parts = self.tangentenSteigung.split("x^")
+            self.tangentenSteigung = int(parts[0])*(self.startwert**int(parts[1]))
+            return int(parts[0]) * (self.startwert ** int(parts[1]))
 
-    # TODO: interpreter
-    def SteigungBerechnen(startwert, funktion):
-        if (funktion.__contains__("x^")):
-            parts = funktion.split("x^")
-            return int(parts[0]) * (startwert ** int(parts[1]))
-
-    def getNewStartwert(achse, steigung):
-        newAchse = achse * (-1)
-        wert = newAchse / steigung
+    def getNewStartwert(self):
+        newAchse = self.achseTangente * (-1)
+        wert = newAchse / self.tangentenSteigung
         print(wert)

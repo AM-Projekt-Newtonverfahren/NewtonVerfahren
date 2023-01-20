@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3c45543a-09bd-4599-85af-74bc535c1e80" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Newtonverfahren.py" beforeDir="false" afterPath="$PROJECT_DIR$/Newtonverfahren.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Polynomfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Polynomfunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +38,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\leand\Documents\01.Projects\Python\Newtonverfahren\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\leand\OneDrive - KBW Kantonsschule Büelrain Winterthur\01.Schule\KBW\AM\Newtonverfahren\newtonverfahren_project\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -72,5 +75,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Polynomfunctions.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -2,6 +2,7 @@ import sys
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy
+from Polynomfunctions import *
 #from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QHBoxLayout, QScrollArea
 
 
@@ -17,15 +18,19 @@ import numpy
     window.show()
     app.exec_()"""
 
-
-
-
 #app_test()
 
-function = Polynomfunctions()
-ableitung = function.ableitenPolynom(2, 3)
+function = Polynomfunctions(2, 3, 1)
+
+ableitung = function.ableitenPolynom()
+achse = function.yAchsenabschnittBerechnenStartwert()
+achseTangente = function.yAchesnabschnittBerechnenTangente()
+steigung = function.steigungBerechnen()
+function.getNewStartwert()
+
+"""ableitung = function.ableitenPolynom(2, 3)
 achse = function.yAchsenabschnittBerechnenStartwert(1, 2, 3)
 achseTangente = function.yAchesnabschnittBerechnenTangente(achse, 1, ableitung, 2, 3)
 steigung = function.SteigungBerechnen(1, ableitung)
-function.getNewStartwert(achseTangente, steigung)
+function.getNewStartwert(achseTangente, steigung)"""
 
